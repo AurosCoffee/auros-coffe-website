@@ -7,7 +7,7 @@ import "./globals.css"
 const dripdrop = localFont({
   src: [
     {
-      path: "/fonts/dripdrop-alt-solid.ttf",
+      path: "../public/fonts/dripdrop-alt-solid.ttf",
       weight: "400",
     },
   ],
@@ -17,7 +17,7 @@ const dripdrop = localFont({
 const syneMono = localFont({
   src: [
     {
-      path: "/fonts/syne-mono-regular.ttf",
+      path: "../public/fonts/syne-mono-regular.ttf",
       weight: "400",
     },
   ],
@@ -27,7 +27,7 @@ const syneMono = localFont({
 const spaceMono = localFont({
   src: [
     {
-      path: "/fonts/space-mono-regular.ttf",
+      path: "../public/fonts/space-mono-regular.ttf",
       weight: "400",
     },
   ],
