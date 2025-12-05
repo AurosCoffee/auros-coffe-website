@@ -8,7 +8,7 @@ export default function Contact({ t }: { t: any }) {
       <div className="max-w-2xl mx-auto space-y-12">
         {/* Section Header */}
         <div className="text-center space-y-4">
-          <h2 className="font-dripdrop text-6xl lg:text-7xl text-foreground">{t.contact.title}</h2>
+          <h2 className="font-dripdrop-alt text-6xl lg:text-7xl text-foreground">{t.contact.title}</h2>
           <p className="text-lg text-muted-foreground">{t.contact.description}</p>
         </div>
 
@@ -30,7 +30,7 @@ export default function Contact({ t }: { t: any }) {
 
           {/* Phone */}
           <a
-            href="tel:(229)9825421"
+            href="tel:#"
             className="flex gap-4 items-start p-6 rounded-sm border border-border hover:bg-secondary transition group"
           >
             <Phone className="w-6 h-6 text-primary flex-shrink-0 group-hover:scale-110 transition-transform" />

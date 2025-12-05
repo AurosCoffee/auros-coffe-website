@@ -7,11 +7,32 @@ import "./globals.css"
 const dripdrop = localFont({
   src: [
     {
-      path: "../public/fonts/dripdrop-alt-solid.ttf",
+      path: "../public/fonts/dripdrop-solid.ttf",
       weight: "400",
     },
   ],
   variable: "--font-dripdrop",
+})
+
+
+const dripdropAlt = localFont({
+  src: [
+    {
+      path: "../public/fonts/dripdrop-alt-solid.ttf",
+      weight: "400",
+    },
+  ],
+  variable: "--font-dripdrop-alt",
+})
+
+const michigan = localFont({
+  src: [
+    {
+      path: "../public/fonts/michigan-signature.ttf",
+      weight: "400",
+    },
+  ],
+  variable: "--font-michigan",
 })
 
 const syneMono = localFont({
@@ -34,6 +55,36 @@ const spaceMono = localFont({
   variable: "--font-space-mono",
 })
 
+const spaceMonoBold = localFont({
+  src: [
+    {
+      path: "../public/fonts/space-mono-bold.ttf",
+      weight: "400",
+    },
+  ],
+  variable: "--font-space-mono-bold",
+})
+
+const spaceMonoItalic = localFont({
+  src: [
+    {
+      path: "../public/fonts/space-mono-italic.ttf",
+      weight: "400",
+    },
+  ],
+  variable: "--font-space-mono-italic",
+})
+
+const spaceMonoBoldItalic = localFont({
+  src: [
+    {
+      path: "../public/fonts/space-mono-bold-italic.ttf",
+      weight: "400",
+    },
+  ],
+  variable: "--font-space-mono-bold-italic",
+})
+
 export const metadata: Metadata = {
   title: "Auros Coffee | Premium Specialty Coffee",
   description:
@@ -47,7 +98,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${dripdrop.variable} ${syneMono.variable} ${spaceMono.variable}`}>
+    <html lang="en" className={`${dripdrop.variable} ${dripdropAlt.variable} ${michigan.variable} ${syneMono.variable} ${spaceMono.variable} ${spaceMonoBold.variable} ${spaceMonoItalic.variable} ${spaceMonoBoldItalic.variable}`}>
       <body className="font-sans antialiased">
         {children}
         <Analytics />

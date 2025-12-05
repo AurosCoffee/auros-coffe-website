@@ -5,7 +5,7 @@
 
 :root {
   /* Auros Coffee brand color system */
-  --background: #f5f1ed; /* Cream */
+  --background: #ffffff; /* Cream */
   --foreground: #000000; /* Black */
   --primary: #6a1917; /* Deep coffee red */
   --primary-foreground: #f5f1ed; /* Cream */
@@ -21,6 +21,7 @@
   --input: #ffffff;
   --ring: #6a1917;
   --radius: 0.5rem;
+  --hero-background: #cedff3; /* Light blue hero background */
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -56,6 +57,7 @@
   --border: oklch(0.269 0 0);
   --input: oklch(0.269 0 0);
   --ring: oklch(0.439 0 0);
+  --hero-background: #1a2332; /* Darker hero background for dark mode */
   --chart-1: oklch(0.488 0.243 264.376);
   --chart-2: oklch(0.696 0.17 162.48);
   --chart-3: oklch(0.769 0.188 70.08);
@@ -92,6 +94,7 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
+  --color-hero-background: var(--hero-background);
   --color-chart-1: var(--chart-1);
   --color-chart-2: var(--chart-2);
   --color-chart-3: var(--chart-3);
@@ -113,7 +116,19 @@
 
 @font-face {
   font-family: "Dripdrop";
+  src: url("/fonts/dripdrop-solid.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Dripdrop Alt";
   src: url("/fonts/dripdrop-alt-solid.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Michigan";
+  src: url("/fonts/michigan-signature.ttf") format("truetype");
   font-weight: 400;
 }
 
@@ -129,12 +144,35 @@
   font-weight: 400;
 }
 
+@font-face {
+  font-family: "Space Mono Bold";
+  src: url("/fonts/space-mono-bold.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Space Mono Italic";
+  src: url("/fonts/space-mono-italic.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Space Mono Bold Italic";
+  src: url("/fonts/space-mono-bold-italic.ttf") format("truetype");
+  font-weight: 400;
+}
+
 @theme inline {
   --font-sans: "Geist", sans-serif;
   --font-mono: "Space Mono", monospace;
   --font-dripdrop: "Dripdrop", sans-serif;
+  --font-dripdrop-alt: "Dripdrop Alt", sans-serif;
+  --font-michigan: "Michigan", sans-serif;
   --font-syne-mono: "Syne Mono", monospace;
   --font-space-mono: "Space Mono", monospace;
+  --font-space-mono-bold: "Space Mono Bold", monospace;
+  --font-space-mono-italic: "Space Mono Italic", monospace;
+  --font-space-mono-bold-italic: "Space Mono Bold Italic", monospace;
 }
 
 @layer base {
@@ -150,6 +188,10 @@
     font-family: "Dripdrop", sans-serif;
   }
 
+  .font-dripdrop-alt {
+    font-family: "Dripdrop Alt", sans-serif;
+  }
+
   .font-syne-mono {
     font-family: "Syne Mono", monospace;
   }
@@ -158,17 +200,29 @@
     font-family: "Space Mono", monospace;
   }
 
+  .font-space-mono-bold {
+    font-family: "Space Mono Bold", monospace;
+  }
+
+  .font-space-mono-italic {
+    font-family: "Space Mono Italic", monospace;
+  }
+
+  .font-space-mono-bold-italic {
+    font-family: "Space Mono Bold Italic", monospace;
+  }
+
   /* Premium typography */
   h1 {
-    @apply font-dripdrop text-5xl lg:text-7xl leading-tight text-foreground;
+    @apply font-dripdrop-alt text-5xl lg:text-7xl leading-tight text-foreground;
   }
 
   h2 {
-    @apply font-dripdrop text-4xl lg:text-5xl leading-tight text-foreground;
+    @apply font-dripdrop-alt text-4xl lg:text-5xl leading-tight text-foreground;
   }
 
   h3 {
-    @apply font-syne-mono text-lg uppercase tracking-wide text-foreground;
+    @apply font-syne-mono text-lg tracking-wide text-foreground;
   }
 
   p {

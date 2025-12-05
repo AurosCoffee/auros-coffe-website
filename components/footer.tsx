@@ -8,7 +8,7 @@ export default function Footer({ t }: { t: any }) {
           {/* Brand */}
           <div className="space-y-4">
             <Image
-              src="/images/03.png"
+              src="/images/03_.png"
               alt="AUROS Coffee"
               width={80}
               height={50}

@@ -9,7 +9,7 @@ import Footer from "@/components/footer"
 import { translations } from "@/lib/translations"
 
 export default function Home() {
-  const [language, setLanguage] = useState<"en" | "es">("en")
+  const [language, setLanguage] = useState<"en" | "es">("es")
   const t = translations[language]
 
   return (
