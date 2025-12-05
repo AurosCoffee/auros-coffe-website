@@ -26,7 +26,7 @@ export default function Navigation({
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="font-syne-mono hidden md:flex items-center gap-8">
             <Link href="#home" className="text-sm font-medium hover:text-primary transition">
               {t.nav.home}
             </Link>

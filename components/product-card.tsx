@@ -49,7 +49,7 @@ export default function ProductCard({ product, t }: ProductCardProps) {
       {/* Product Info */}
       <div className="space-y-5">
         <div>
-          <h3 className="font-dripdrop text-5xl text-primary mb-2">{product.name}</h3>
+          <h3 className="font-space-mono-bold text-5xl text-primary mb-2">{product.name}</h3>
           <p className="text-xs font-syne-mono uppercase tracking-widest text-muted-foreground">{product.roast}</p>
         </div>
 
@@ -101,7 +101,7 @@ export default function ProductCard({ product, t }: ProductCardProps) {
             ))}
           </div>
           <div className="flex items-center justify-between">
-            <span className="text-3xl font-dripdrop text-foreground">
+            <span className="text-3xl font-space-mono text-foreground">
               ${product.sizes[selectedSize].price.toFixed(2)}
             </span>
             <button className="p-3 bg-primary text-primary-foreground rounded-sm hover:opacity-90 transition">

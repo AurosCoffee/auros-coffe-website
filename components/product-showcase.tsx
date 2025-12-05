@@ -58,11 +58,11 @@ const products = [
 
 export default function ProductShowcase({ t }: { t: any }) {
   return (
-    <section id="shop" className="py-32 px-4 sm:px-6 lg:px-8 bg-secondary">
+    <section id="shop" className="py-32 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-7xl mx-auto space-y-16">
         {/* Section Header */}
         <div className="text-center space-y-4 max-w-2xl mx-auto">
-          <h2 className="font-dripdrop text-6xl lg:text-7xl text-foreground">{t.products.title}</h2>
+          <h2 className="text-6xl lg:text-7xl text-foreground">{t.products.title}</h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
             Carefully curated selections from the world's finest coffee regions
           </p>
