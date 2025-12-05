@@ -65,7 +65,7 @@ export default function Navigation({
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden pb-4 space-y-2">
+          <div className="font-syne-mono md:hidden pb-4 space-y-2">
             <Link href="#home" className="block text-sm font-medium hover:text-primary py-2">
               {t.nav.home}
             </Link>
