@@ -20,7 +20,7 @@ export default function Footer({ t }: { t: any }) {
           {/* Shop */}
           <div className="space-y-4">
             <h4 className="font-syne-mono text-xs uppercase tracking-widest font-semibold">{t.footer.shop}</h4>
-            <ul className="space-y-2 text-sm text-primary-foreground/70">
+            <ul className="font-space-mono space-y-2 text-sm text-primary-foreground/70">
               <li>
                 <a href="#shop" className="hover:text-primary-foreground transition">
                   {t.footer.allCoffee}
@@ -42,7 +42,7 @@ export default function Footer({ t }: { t: any }) {
           {/* About */}
           <div className="space-y-4">
             <h4 className="font-syne-mono text-xs uppercase tracking-widest font-semibold">{t.footer.about}</h4>
-            <ul className="space-y-2 text-sm text-primary-foreground/70">
+            <ul className="font-space-mono space-y-2 text-sm text-primary-foreground/70">
               <li>
                 <a href="#" className="hover:text-primary-foreground transition">
                   {t.footer.ourStory}
@@ -64,7 +64,7 @@ export default function Footer({ t }: { t: any }) {
           {/* Support */}
           <div className="space-y-4">
             <h4 className="font-syne-mono text-xs uppercase tracking-widest font-semibold">{t.footer.support}</h4>
-            <ul className="space-y-2 text-sm text-primary-foreground/70">
+            <ul className="font-space-mono space-y-2 text-sm text-primary-foreground/70">
               <li>
                 <a href="#" className="hover:text-primary-foreground transition">
                   {t.footer.faq}
@@ -86,7 +86,7 @@ export default function Footer({ t }: { t: any }) {
 
         {/* Divider */}
         <div className="border-t border-primary-foreground/10 pt-8">
-          <p className="text-sm text-primary-foreground/70 text-center font-space-mono">{t.footer.copyright}</p>
+          <p className="text-sm text-primary-foreground/70 text-center font-syne-mono">{t.footer.copyright}</p>
         </div>
       </div>
     </footer>

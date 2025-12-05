@@ -63,9 +63,7 @@ export default function ProductShowcase({ t }: { t: any }) {
         {/* Section Header */}
         <div className="text-center space-y-4 max-w-2xl mx-auto">
           <h2 className="text-6xl lg:text-7xl text-foreground">{t.products.title}</h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">
-            Carefully curated selections from the world's finest coffee regions
-          </p>
+          <p className="text-lg text-muted-foreground leading-relaxed">{t.products.headline}</p>
         </div>
 
         {/* Product Grid */}

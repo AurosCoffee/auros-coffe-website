@@ -16,6 +16,7 @@ export const translations = {
     },
     products: {
       title: "Our Collections",
+      headline: "Carefully curated selections from the world's finest coffee regions",
       umbra: "Umbra",
       luma: "Luma",
       nocte: "Nocte",
@@ -72,6 +73,7 @@ export const translations = {
     },
     products: {
       title: "Nuestras Colecciones",
+      headline: "Cuidadosamente seleccionadas de las mejores regiones de café del mundo",
       umbra: "Umbra",
       luma: "Luma",
       nocte: "Nocte",
