@@ -1,5 +1,9 @@
 export const translations = {
   en: {
+    metadata: {
+      title: "Auros Cafe | Premium Specialty Coffee",
+      description: "Experience ethically sourced, premium specialty coffee from around the world. Auros Coffee delivers excellence in every cup.",
+    },
     nav: {
       home: "Home",
       about: "About",
@@ -57,6 +61,10 @@ export const translations = {
     },
   },
   es: {
+    metadata: {
+      title: "Auros Cafe | Café Premium de Especialidad",
+      description: "Experimenta café de especialidad premium de origen ético de todo el mundo. Auros Coffee ofrece excelencia en cada taza.",
+    },
     nav: {
       home: "Inicio",
       about: "Acerca de",

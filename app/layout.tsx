@@ -2,6 +2,7 @@ import type React from "react"
 import type { Metadata } from "next"
 import localFont from "next/font/local"
 import { Analytics } from "@vercel/analytics/next"
+import { translations } from "@/lib/translations"
 import "./globals.css"
 
 const dripdrop = localFont({
@@ -85,11 +86,12 @@ const spaceMonoBoldItalic = localFont({
   variable: "--font-space-mono-bold-italic",
 })
 
+// Default to Spanish since that's the default language in page.tsx
+const defaultLang = "es"
+
 export const metadata: Metadata = {
-  title: "Auros Coffee | Premium Specialty Coffee",
-  description:
-    "Experience ethically sourced, premium specialty coffee from around the world. Auros Coffee delivers excellence in every cup.",
-  generator: "v0.app",
+  title: translations[defaultLang].metadata.title,
+  description: translations[defaultLang].metadata.description,
 }
 
 export default function RootLayout({
