@@ -226,6 +226,6 @@
   }
 
   p {
-    @apply text-foreground/80 leading-relaxed;
+    @apply font-space-mono text-foreground/80 leading-relaxed;
   }
 }
