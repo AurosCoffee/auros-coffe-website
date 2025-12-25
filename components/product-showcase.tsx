@@ -33,8 +33,8 @@ const products = [
     image: "/images/umbra.png",
     sizes: [
       { size: "250g", price: 155.00 },
-      { size: "500g", price: 285.00 },
-      { size: "1kg", price: 535.00 },
+      { size: "500g", price: 290.00 },
+      { size: "1kg", price: 540.00 },
     ],
   },
   // {
