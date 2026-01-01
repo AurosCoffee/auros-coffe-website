@@ -14,10 +14,11 @@ const products = [
   //   body: 5,
   //   sweetness: 4,
   //   image: "/images/nocte.png",
+  //   available: false, // Set to true when stock is ready
   //   sizes: [
-  //     { size: "250g", price: 14.99 },
-  //     { size: "500g", price: 26.99 },
-  //     { size: "1kg", price: 48.99 },
+  //     { size: "250g", price: 155.00 },
+  //     { size: "500g", price: 290.00 },
+  //     { size: "1kg", price: 540.00 },
   //   ],
   // },
   {
@@ -31,6 +32,7 @@ const products = [
     body: 4,
     sweetness: 5,
     image: "/images/umbra.png",
+    available: true, // Set to true when stock is ready
     sizes: [
       { size: "250g", price: 155.00 },
       { size: "500g", price: 290.00 },
