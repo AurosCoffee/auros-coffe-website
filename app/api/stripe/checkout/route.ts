@@ -29,7 +29,10 @@ export async function POST(request: NextRequest) {
     }
 
     // Get base URL for success/cancel redirects
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'
+    // Automatically detects Vercel preview URLs, production, or localhost
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL
+      || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : null)
+      || 'http://localhost:3000'
 
     // Create Stripe checkout session
     const session = await stripe.checkout.sessions.create({
