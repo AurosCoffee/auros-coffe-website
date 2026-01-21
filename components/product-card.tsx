@@ -25,11 +25,27 @@ export default function ProductCard({ product, t }: ProductCardProps) {
   const [selectedSize, setSelectedSize] = useState(0)
 
   const renderDots = (count: number) => {
+    const fullDots = Math.floor(count)
+    const hasHalf = count % 1 !== 0
+
     return Array(5)
       .fill(0)
-      .map((_, i) => (
-        <div key={i} className={`w-2.5 h-2.5 rounded-full transition ${i < count ? "bg-primary" : "bg-muted"}`} />
-      ))
+      .map((_, i) => {
+        if (i < fullDots) {
+          // Full dot
+          return <div key={i} className="w-2.5 h-2.5 rounded-full transition bg-primary" />
+        } else if (i === fullDots && hasHalf) {
+          // Half dot
+          return (
+            <div key={i} className="w-2.5 h-2.5 rounded-full transition bg-muted overflow-hidden relative">
+              <div className="absolute inset-0 bg-primary" style={{ clipPath: "inset(0 50% 0 0)" }} />
+            </div>
+          )
+        } else {
+          // Empty dot
+          return <div key={i} className="w-2.5 h-2.5 rounded-full transition bg-muted" />
+        }
+      })
   }
 
   return (
@@ -49,7 +65,7 @@ export default function ProductCard({ product, t }: ProductCardProps) {
       {/* Product Info */}
       <div className="space-y-5">
         <div>
-          <h3 className="font-space-mono-bold text-5xl text-primary mb-2">{product.name}</h3>
+          <h3 className="font-space-mono-bold text-4xl text-primary mb-2">{product.name}</h3>
           <p className="text-xs font-syne-mono uppercase tracking-widest text-muted-foreground">{product.roast}</p>
         </div>
 
