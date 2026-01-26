@@ -4,6 +4,7 @@ import { useState } from "react"
 import { ShoppingCart, Menu, X } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+import { useCart } from "@/lib/hooks/use-cart"
 
 export default function Navigation({
   language,
@@ -15,6 +16,7 @@ export default function Navigation({
   t: any
 }) {
   const [isOpen, setIsOpen] = useState(false)
+  const { itemCount, openCart } = useCart()
 
   return (
     <nav className="fixed top-0 w-full bg-background/95 backdrop-blur-sm z-50 border-b border-border">
@@ -50,11 +52,17 @@ export default function Navigation({
               {language === "en" ? "ES" : "EN"}
             </button>
 
-            <button className="relative p-2 hover:bg-secondary rounded-lg transition">
+            <button
+              onClick={openCart}
+              className="relative p-2 hover:bg-secondary rounded-lg transition"
+              aria-label="Open cart"
+            >
               <ShoppingCart className="w-5 h-5" />
-              <span className="absolute top-1 right-1 bg-primary text-primary-foreground text-xs rounded-full w-4 h-4 flex items-center justify-center">
-                0
-              </span>
+              {itemCount > 0 && (
+                <span className="absolute top-1 right-1 bg-primary text-primary-foreground text-xs rounded-full w-4 h-4 flex items-center justify-center">
+                  {itemCount}
+                </span>
+              )}
             </button>
 
             <button className="md:hidden p-2" onClick={() => setIsOpen(!isOpen)}>
